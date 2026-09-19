@@ -230,7 +230,7 @@ class Rental_Apartment extends Widget_Base {
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-5">
-                        <div class="view_more_btn float-right d-none d-md-block">
+                        <div class="view_more_btn float-end d-none d-md-block">
                             <?php
                             if( $alinksLabel ){
                                 echo '<a href="'. esc_url( $alinks ) .'" class="btn_2">'. esc_html( $alinksLabel ) .'<span class="ti-arrow-right"></span></a>';

@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
 	                    <?php echo rental_theme_logo( 'navbar-brand logo_h' ); ?>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -40,7 +40,7 @@
 
                         if( !empty( rental_opt( 'rental_header_c2a_label' ) ) ){ ?>
                             <div class="btn_1 d-none d-lg-block">
-                                <?php echo '<a href="'. esc_url( rental_opt( 'rental_header_c2a_url' ) ) .'" class="float-right">'. esc_html( rental_opt( 'rental_header_c2a_label' ) ) .'</a>'; ?>
+                                <?php echo '<a href="'. esc_url( rental_opt( 'rental_header_c2a_url' ) ) .'" class="float-end">'. esc_html( rental_opt( 'rental_header_c2a_label' ) ) .'</a>'; ?>
                             </div>
                             <?php
                         }

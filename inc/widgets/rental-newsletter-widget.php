@@ -52,7 +52,7 @@ class Rental_newsletter_widget extends WP_Widget {
             <form target="_blank" action="<?php echo esc_url( $actionurl ); ?>" method="post" class="newsletter_form">
                 <div class="form-group mail_part">
                     <input class="form-control" type="email" name="EMAIL" placeholder="<?php esc_html_e( 'Enter Email', 'rental' ); ?>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required>
-                    <a href="" class="email_icon"><i class="fa fa-paper-plane"></i></a>
+                    <a href="" class="email_icon"><i class="fa-solid fa-paper-plane"></i></a>
                 </div>
                 <button class="button rounded-0 primary-bg text-white w-100" type="submit">Subscribe</button>
 

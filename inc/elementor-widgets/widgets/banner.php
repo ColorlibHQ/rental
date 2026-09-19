@@ -294,7 +294,7 @@ class Rental_Banner extends Widget_Base {
                                            $i =0;
 
                                            foreach ( $socialLinks as $slink ){
-	                                           $circle = $net > $i++ ? '<i class="fa fa-circle"></i>' : '';
+	                                           $circle = $net > $i++ ? '<i class="fa-solid fa-circle"></i>' : '';
                                                echo '<li class="list-inline-item"><a href="'. esc_url( $slink['link']['url'] ) .'"><span class="'. esc_attr( $slink['icon'] ) .'"></span>'. esc_html( $slink['label'] ) .'</a><span class="dot">'. $circle .'</span></li>';
                                            }
                                            ?>
