@@ -326,7 +326,6 @@ if ( !class_exists( 'Rental_El_Widgets' ) ) {
             require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/banner.php';
             require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/about.php';
             require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/services.php';
-            require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/projects.php';
             require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/pricing.php';
             require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/testimonial.php';
             require_once RENTAL_DIR_PATH_ELEMENTOR_WIDGETS . '/widgets/features.php';
@@ -354,7 +353,6 @@ if ( !class_exists( 'Rental_El_Widgets' ) ) {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_Banner() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_About() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_Services() );
-            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_projects() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_Pricing() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_Testimonial() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Rentalelementor\Widgets\Rental_Features() );

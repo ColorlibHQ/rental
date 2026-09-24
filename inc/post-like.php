@@ -14,6 +14,7 @@ function rental_sl_enqueue_scripts() {
 
 	wp_localize_script( 'rental-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'like'    => esc_html__( 'Like', 'rental' ),
 		'unlike'  => esc_html__( 'Unlike', 'rental' )
 	) );
 }

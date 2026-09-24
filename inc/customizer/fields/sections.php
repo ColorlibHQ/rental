@@ -71,18 +71,6 @@ $sections = array(
         ),
     ),
 
-    /**
-     * Blog Section
-     */
-    array(
-        'id'   => 'rental_portfolio_section',
-        'args' => array(
-            'title'    => esc_html__( 'Portfolio', 'rental' ),
-            'panel'    => 'rental_theme_options_panel',
-            'priority' => 4,
-        ),
-    ),
-
 
 
     /**

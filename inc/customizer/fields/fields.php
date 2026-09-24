@@ -216,52 +216,6 @@ Colorlib_Customizer::add_field(
     )
 );
 
-/*==============================================
-	Portfolio Section
- =============================================*/
-
-
-Colorlib_Customizer::add_field(
-	'rental_portfolio_single_rp',
-	array(
-		'type'        => 'colorlib-toggle',
-		'label'       => esc_html__( 'Portfolio Recent Post Section show/hide', 'rental' ),
-		'section'     => 'rental_portfolio_section',
-		'default'     => false
-	)
-);
-Colorlib_Customizer::add_field(
-	'portfolio_recent_post_section_title',
-	array(
-		'type'              => 'colorlib-text-editor',
-		'label'             => esc_html__( 'Recent Portfolio Section Title ', 'rental' ),
-		'description'       => esc_html__( 'Use "< span>Tag< /span>" for color with italic', 'rental' ),
-		'section'           => 'rental_portfolio_section',
-		'default'           => wp_kses_post('Check <span>Recent</span> Work')
-	)
-);
-Colorlib_Customizer::add_field(
-	'portfolio_recent_post_section_subtitle',
-	array(
-		'type'              => 'text',
-		'label'             => esc_html__( 'Section Sub Title', 'rental' ),
-		'section'           => 'rental_portfolio_section',
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => __('She\'d earth that midst void creeping him above seas.', 'rental')
-	)
-);
-Colorlib_Customizer::add_field(
-	'portfolio_recent_post_number',
-	array(
-		'type'              => 'number',
-		'label'             => esc_html__( 'Recent Portfolio Number', 'rental' ),
-		'section'           => 'rental_portfolio_section',
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => absint('3')
-	)
-);
-
-
 /***********************************
  * 404 Page Section Fields
  ***********************************/
