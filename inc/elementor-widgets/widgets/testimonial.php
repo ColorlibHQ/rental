@@ -286,11 +286,11 @@ class Rental_Testimonial extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-
-            var review = $('.review_part_text');
-            if (review.length) {
-                review.owlCarousel({
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                UI.owl('.review_part_text', {
                     items: 2,
                     loop: true,
                     dots: true,
@@ -312,8 +312,12 @@ class Rental_Testimonial extends Widget_Base {
                     }
                 });
             }
-            
-        })(jQuery);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

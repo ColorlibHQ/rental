@@ -234,31 +234,27 @@ class Rental_projects extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-
-
-                $('.portfolio-filter ul li').on('click', function () {
-                    $('.portfolio-filter ul li').removeClass('active');
-                    $(this).addClass('active');
-
-                    var data = $(this).attr('data-filter');
-                    $workGrid.isotope({
-                        filter: data
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                // The filter buttons mark the chosen one active. This script
+                // also started Isotope on .portfolio-grid, but the theme never
+                // loaded Isotope, so that part only ever threw; it is left out.
+                var items = UI.toElements('.portfolio-filter ul li');
+                items.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        items.forEach(function (li) { li.classList.remove('active'); });
+                        item.classList.add('active');
                     });
                 });
-
-                if (document.getElementById('portfolio')) {
-                    var $workGrid = $('.portfolio-grid').isotope({
-                        itemSelector: '.all',
-                        percentPosition: true,
-                        masonry: {
-                            columnWidth: '.grid-sizer'
-                        }
-                    });
-                }
-            
-
-        })(jQuery);
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }
