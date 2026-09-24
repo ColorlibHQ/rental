@@ -212,19 +212,19 @@
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
+					
 					array(
-						'handler'		=> 'instagramFeed',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
+						'handler'		=> 'rental-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
 						'in_footer' 	=> true
 					),
-					
 					array(
 						'handler'		=> 'rental-main',
 						'file' 			=> $jsPath.'main.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> $this->rental_version,
+						'dependency' 	=> array( 'jquery', 'rental-ui-js' ),
+						'version' 		=> $this->rental_version . '-s1',
 						'in_footer' 	=> true
 					),
 
